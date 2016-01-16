@@ -1,48 +1,40 @@
-# Quick Overview and Introduction to Node.js
+# Introduction to Node.js
 
 ## Overview
 
-In this lesson covers a quick overview of Node.js, and what it is, as well as explains non-blocking I/O, and provides a bird's-eye on who Node fits into web and other types of software development.
+We'll give a quick overview of Node.js and explain non-blocking I/O, and provide a bird's eye view on how it fits into web development.
 
 
 ## Objectives
 
-1. Describe what is Node
-1. Describe Node as a non-blocking I/O platform
-1. Explain key differences between Node and other platforms like Java, Ruby, and Python
-1. Describe Node history (a very brief version)
-1. Get the sense of how Node fits into web development
-1. Describe how Node fits into other development environments (embedded systems, IoT, drones)
-1. Describe Node ecosystem, npm, its philosyphy of granular modules and its benefits
+1. Describe increase in performance when using Node.js?
+1. Describe the re-use of code when using Node.js?
+1. Describe Node.js history (a very brief version)
 
-## What is Node.js
+## Non-Blocking Input/Output
 
-Have you worked with Rails and had to wait while its ActiveRecord was processing some simple database join? Or maybe you used PHP or an web app like a WordPress or Drupal on Apache and it was slooow? Slow platforms not just annoying to develop with, they cost companies hundreds of thousands of dollars each month in servers and CPUs. What if I told you there is a high performant and scalable system which is extremely efficient yet fun to work with? 
+Have you worked with Rails and had to wait while its ActiveRecord was processing some simple database join? Or maybe you remember seeing the fail whale every time Twitter was over the capacity. It happened quite often, maybe every week. Slow systems are not only frustrating to users. They cost money to companies because users leave to other services and products. Slow systems are system that cannot handle the traffic or load properly. The slow is a relative term. One system can perform adequate without comparisons, for example what we consider slow in 2016 is very fast comparing to 2000. The reason can be the use of a bad architecture. With Rails the slowness is due to the high-level of abstraction meaning the Object Relational Mapper (ORM) Active Record and the framework as the whole is doing too many things. It's a good thing for developer because we have to code less, but as the real-life showed—not so good for the systems. Another reason for slowness is the way systems are architectured. 
 
-You see, when you switch context between Ruby and front-end JavaScript or between SQL and PHP, your brain loses productivity. Not to mention additional APIs to remember. I always had Ruby and Java docs opened when I was coding. Not anymore. Once I switch to Node which uses JavaScript, I work at least 10x faster and having a blast while doing it. So what is this Node thing?
+![](fail-whale.gif)
 
-Node.js is a non-blocking platform for building web applications. It uses JavaScript, or to be more precise ECMAScript (ES) with JavaScript being one implementation of ES and Node another. While Node started as a web platform, it quickly found applications in other areas such as build tools, package managers code generators, embedded systems and more.
+So slow platforms not just annoying to develop with, they cost companies hundreds of thousands of dollars each month in servers and CPUs. What if I told you there is a high performant and scalable system which is extremely efficient yet fun to work with? 
 
-Think about Node as a bunch of C++ modules from Google Chrome V8 engine (the same things that runs JavaScript in Chrome browsers) and JavaScript interface. There's an actual file called `node.js` which takes your JavaScript scripts (no compilations) and runs them using the Event Loop and C++ binding.
+Node.js is one of those scalable platforms which enable engineers to build fast systems. Imagine a Starbucks coffeeshop. You see 20 people standing in line and just one person working at the cafe. The single barista is also a cashier meaning this employee must first take the order, then make it. Each person has to wait for the not only for his or her drink but for the order before them... would you wait in line if you are the last? The 20th person? As a manager of this cafe, the only way to scale is to add more registers. By adding more registers and employees we can have more than one line. Each cashier is still taking the orders and making the drinks. This is not the most pleasant experience for customers because they don't like standing in lines. Slow systems are painful and they cost money because customers can walk away without ordering anything. 
 
-The most important thing to remember from this lesson: the key differentiator of Node is its non-blocking I/O. Continue reading to learn about it.
+Luckily, this is not how the most Starbucks or coffeeshops operate. You order your  fancy choco-mocha-frappe-latte-soy-decafs, the cashier will yell your order and take the money. You step aside to check to work on some Learn.co modules. You can do other things while waiting for your drink. The line is not blocked. It moves faster. The orders are taken by the cashier and the drinks are made by another employee. This is a more pleasurable experience than waiting the entire time in the line right?
 
-## Non-blocking I/O
+The first scenario is how most of the platforms, e.g., Rails operate. The approach is called blocking input/output (I/O) in computer world because the line(s) are blocked be previous orders (or tasks in the computer lingo). The line is a metaphor for a queue of tasks while the employees can be servers. So how Node.js is different? Node.js has non-blocking I/O which as you might guess is the latter approach. 
 
-One of the biggest advantages of using Node.js over Python or Ruby is that Node has a non-blocking I/O mechanism. To illustrate this, let me use an example of a line in a Starbucks coffeeshop. Let's pretend that each person standing in line for a drink is a task, and everything behind the counter — cashier, register, barista — is a server or server application. Whether we order a cup of regular drip coffee, like Pike Place, or hot tea, like Earl Grey, the barista makes it. The whole line waits while that drink is made, and each person is charged the appropriate amount.
+The queue moves, and the processes are executed asynchronously and without blocking the queue. Note: The real Starbucks uses blocking I/O for simple drinks house brews in a big coffers like Pike Place (regular brew) and teas. They take a minute or so to make.  However, the chain uses a non-blocking I/O system for hand-crafted one like lattes, frappes, Cappuccino and others which take longer to make.
 
-Of course, we know the aforementioned drinks (a.k.a., time-consuming bottlenecks) are easy to make; just pour the liquid and it's done. But what about those fancy choco-mocha-frappe-latte-soy-decafs? What if everybody in line decides to order these time-consuming drinks? The line will be held up, and in turn, grow longer and longer. The manager of the coffeeshop will have to add more registers and put more baristas to work (or even stand behind the register him/herself).
-
-This is not good, right? But this is how virtually all server-side technologies work, except Node.js, which is like ordering a fancy drink at Starbucks: when you order something time-consuming (try Green Tea latter with coconut milk-yum!), the barista yells the order to the other employee, and you leave the register. Another person gives their order while you wait for your state-of-the-art eye-opener in a paper cup. The line moves, the processes are executed asynchronously and without blocking the queue. So in a sense, Starbucks uses blocking I/O for simple drinks like Pike Place (regular brew) and non-blocking I/O for hand-crafted one like Cappuccino.
-
-This is why Node.js blows everything else away (except maybe low-level C++) in terms of performance and scalability. With Node.js, you just don't need that many CPUs and servers to handle the load.
+Therefore, Node.js systems can serve more traffic because they are not idle or blocked. They can process other tasks while waiting on the input/output operations (usually the most time consuming). For example, a Node.js server can process a request from a client B while it waits for a response from a database to server a response to client A. Most other system will do nothing while they wait for a reply from a database to server client A's request.
 
 
-## Node vs Others
+## Full Stack JavaScript
 
-One of the key differences between Node and other platforms such as Java, Ruby and Python is its non-blocking I/O which we already covered. Now, don't get me wrong. Some other platforms/languages have frameworks and solutions to achieve non-blocking I/O, e.g., [Netty](http://netty.io), [EventMachine](http://rubyeventmachine.com) and [Twisted](https://twistedmatrix.com). However, these solutions typically more complex than Node (take it with a grain of salt as I never worked with Netty, EventMachine or Twisted seriously), and the platforms like PHP, Java, Ruby and Python weren't build with the non-blocking I/O in mind from the ground up. On the other hand, Node was built specifically for web app and as a non-blocking I/O platform. 
+When you develop application in Rails, you might use Haml to render server-side templates, then on the client-side you might use another framework and another template engine like Angular or Mustache. Those libraries are great, but consider that you have 100s of pages with a duplicate templates: one file for server-side rendering and another for browser rendering. To add complexity, this is an enterprise application which has been developed many years ago and you have 20+ people working on the project. How are you going to make changes to 200+ files? You need to make similar changes to two files and then change the tests as well. What if they are different languages? Imagine the nightmare. Sadly this is the case in most systems.
 
-Another huge difference when you work with Node is this concept called isomorphic or universal JavaScript. I prefer term full-stack JavaScript. No matter how you call it, the idea is that you can re-use files, libraries and modules between server and browser seamlessly. This is huge because we, as web developers amassed boatloads of great utilities and tools for browser JavaScript. Most of them are ready-to-go in Node environment with very minor modifications, e.g., using [Browserify](http://browserify.org). Same thing applies to books, blogs, screencasts. We know and improve JavaScript language (ES6, ES7, etc.) which put Node in a unique position. Honestly, I doubt Go or some other new platform can compete with Node in near future because of this unique combination which allows developers to have language to rule 'em all!
+Node is different because it has this concept called full stack, isomorphic or universal JavaScript. I prefer term full-stack JavaScript. No matter how you call it, the idea is that you can re-use files, libraries and modules between server and browser seamlessly. This is huge because we, as web developers amassed boatloads of great utilities and tools for browser JavaScript. Most of them are ready-to-go in Node environment with very minor modifications, e.g., using [Browserify](http://browserify.org). Same thing applies to books, blogs, screencasts. We know and improve JavaScript language (ES6, ES7, etc.) which put Node in a unique position. Honestly, I doubt Go or some other new platform can compete with Node in near future because of this unique combination which allows developers to have language to rule 'em all!
 
 ## Node History
 
@@ -58,38 +50,12 @@ I know that you probably want to learn how to and not history. Feel free to skip
 Watch this video which in 5 minutes explains [the past, present and the future of Node.js and Joeynt](https://www.youtube.com/watch?v=dWwIHRLzLew).
 
 
-## Node in Web Development
-
-When people starting working with Node.js for the first time in the classes I teach, I often get a blank stare and questions like: Do you need Tomcat? How to configure Apache? Now, for those of you who don't know, those are web servers. Most platforms run on these or similar web servers as modules. So you need both, the language like PHP and a web server like Apache. 
-
-Node.js is a different beast. I can do both things. It can be a web server and an application environment. You can build traditional web app which render HTML on the server a la 1998 or you can build APIs for your shiny single-page browser applications. Or maybe APIs for other API or clients (mobile, IoT, etc.). I think the latter is a more popular approach. 
-
-On more usage for Node is build tools like Grunt, Gulp, Webpack, Browserify and others. They allow to minify, compile and do all sorts of other useful things with your front-end (browser) files before you ship them to production. I would put into this category dev tools as well. Static servers like node-static or http-server and test frameworks and runners like Mocha, Jasmine, Casper.
-
-Another thing is how we install packages themselves. Most of the projects use npm for browser modules. npm started as Node package manager. ;)
-
-## Node into other development environments (embedded systems, IoT, drones)
-
-Node is not for web anymore. It's used in robotics, embedded systems and Internet of Things. With Node, it's very easy to expose via JavaScript interface some C++ code that you wrote for hardware or an embedded system. JavaScript is high-level language. It's better for most end-users than C so a lot of these systems provide drivers in Node now. Also, JavaScript and the whole non-blocking asynchronous style fits really well to manipulate [drones](https://github.com/felixge/node-ar-drone) and [robots](http://cylonjs.com).
-
-
-## Node Ecosystem
-
-
-npm/NPM comes with the Node.js platform and allows for seamless Node.js package management. The best thing about NPM is that it keep all the dependencies local, so if module A uses module B v1.3 and module C uses module B v2.0 (with breaking changes comparing to v1.3), both A and C will have their own localized copies of different versions of B. This proves to be a more superior strategy unlike Ruby and other platforms that use global installations by default.
-
-**Note**: The NPM creator likes to call it `npm` ([lowercase](http://npmjs.org/doc/misc/npm-faq.html#Is-it-npm-or-NPM-or-Npm)).
-
-The npm philosophy is to have a lot of small granular modules with each doing just one simple function. This way you can be free from large standard libraries. You can pick and choose what suits you the best. This might be a turn off for certain people who like when decisions are made for them, i.e., most of the libraries are bundled into the core. With Node, the core is very minimal. Node is NOT a framework like Symphony, Rails or Spring. It's a low-level platform. However, there are plenty of Node frameworks to pick from. Some of them are very very sophisticated like Meteor, Loopback or Sails for example.
-
-The Node ecosystem is one of the main factors that attributed to the fast and wide adaption of Node. npm is the central location where people host not just Node, but browser modules as well.
 
 ## Resources
 
+1. [The Story of the Fail Whale](http://readwrite.com/2008/07/17/the_story_of_the_fail_whale)
 1. [Ryan Dahl: Original Node.js presentation](https://www.youtube.com/watch?v=ztspvPYybIY)
-1. [Node Copter](http://www.nodecopter.com)
-2. [Why Node.js is Ideal for the Internet of Things](http://www.programmableweb.com/news/why-node.js-ideal-internet-things/analysis/2014/07/31)
-3. [Node-RED](http://nodered.org)
+1. [The past, present and the future of Node.js and Joeynt](https://www.youtube.com/watch?v=dWwIHRLzLew)
 4. [Node.js Foundation](https://nodejs.org/en/foundation)
 
 ---
