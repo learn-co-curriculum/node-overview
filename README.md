@@ -7,22 +7,21 @@ We'll give a quick overview of Node and explain a non-blocking input/output (I/O
 
 ## Objectives
 
-1. Describe increase in performance when using Node?
-1. Describe the re-use of code when using Node?
+1. Describe increase in performance when using Node
+1. Describe the re-use of code when using Node
 1. Describe Node history (a very brief version)
 
 ## Increasing Performance with Non-Blocking Input/Output
 
-Have you worked with Rails and had to wait while its ActiveRecord was processing some simple database join? Or maybe you remember seeing the Twitter fail whale (a funny error page) every time the social network was over the capacity a few year ago? It happened quite often, maybe every week. 
+Have you worked with Rails and had to wait while ActiveRecord was processing some simple database join? Or maybe you remember seeing the Twitter fail whale (a funny error page) every time the social network was over the capacity a few year ago? It happened quite often, maybe every week. 
 
 ![](fail-whale.gif)
 
-Slow systems are not only frustrating to users. They cost money to companies, because companies have so spend more money on servers, and because users leave to other services and products. Slow systems are system that cannot handle the traffic or load properly. The slow is a relative term meaning it depends on comparison, for example what we consider slow in 2016 is very fast comparing to 2000. 
+Slow systems are not only frustrating to users, but also to companies. They cost money to companies, because of server cost, and because users leave to other services and products. A slow systems is a system that cannot handle the traffic or load properly. The term "slow" is a relative term that depends on comparison, for example what we consider slow in 2016 is very fast compared to 2000. 
 
-The reason for slowness can be the use of a bad architecture. With Rails the slowness is due to the high-level of abstraction meaning the Object Relational Mapper (ORM) Active Record, and the framework as the whole, is doing too many things. It's a good thing for developers, because we have to code less, but as Twitter and other companies showed—not so good for the systems. Another reason for slowness is the way systems are architectured. 
+The reason for slowness can be the use of a bad architecture. With Rails the slowness is due to the high-level of abstraction. The Object Relational Mapper (ORM), Active Record, and the framework as the whole, are doing too many things. It's a good thing for developers, because we have to code less, but as Twitter and other companies showed, not so good for the systems. Another reason for slowness is the architecture of the system.
 
-
-So slow platforms not just annoying to develop with, they cost companies hundreds of thousands of dollars each month in servers and CPUs. Imagine a Starbucks coffeeshop. You see 20 people standing in line and just one person working at the cafe. The single barista is also a cashier meaning this employee must first take the order, then make it. Each person has to wait not only for his or her drink, but for the order before them... would you wait in line if you are the last? The 20th person? Brrr...
+So slow platforms not just annoying to develop with, they cost companies hundreds of thousands of dollars each month in servers and CPUs. Imagine a Starbucks coffee shop. You see 20 people standing in line and just one person working at the cafe. The single barista is also a cashier meaning this employee must first take the order, then make it. Each person has to wait not only for his or her drink, but for the order before them... would you wait in line if you are the last? The 20th person? Brrr...
 
 As a manager of this cafe, the only way to scale is to add more registers. By adding more registers and employees we can have more than one line. Each cashier is still taking the orders and making the drinks. This is not the most pleasant experience for customers, because they don't like standing in lines. They prefer waiting or working on something useful at their tables. Slow systems are painful and they cost money because customers can walk away without ordering anything. 
 
@@ -37,7 +36,6 @@ Therefore, Node systems can serve more traffic because they are not idle or bloc
 **Note**: The real Starbucks uses blocking I/O for simple drinks house brews in a big coffers like Pike Place (regular brew) and teas. They take a minute or so to make.  However, the chain uses a non-blocking I/O system for hand-crafted one like lattes, frappes, Cappuccino and others which take longer to make.
 
 
-
 ## Full Stack JavaScript
 
 When you develop application in Rails, you might use Haml to render server-side templates, then on the client-side you might use another framework and another template engine like Angular or Mustache. Those libraries are great, but consider that you have 100s of pages with a duplicate templates: one file for server-side rendering and another for browser rendering. 
@@ -46,7 +44,7 @@ To add complexity, this is an enterprise application which has been developed ma
 
 Node is different, because it has this concept called full stack, isomorphic or universal JavaScript. I prefer term full-stack JavaScript. No matter how you call it, the idea is that you can re-use files, libraries and modules between server and browser seamlessly. This is possible because Node runs on a language similar (but not not 100% identical) to your good old friend—browser JavaScript. 
 
-Having one language on the browser and server (and the database if you want!) is huge, because we can re-use code. Also, web developers amassed boatloads of great utilities, tools, and the best practices for browser JavaScript, because JS has been around for 21 years now (as of Jan 2016). Most of them are ready-to-go in Node environment with very minor modifications, e.g., using [Browserify](http://browserify.org). We also have a lot of great tutorials, books, blogs, and screencasts on JS. In addition, there's a standard which improves JavaScript language (ES6, ES7, etc.). All it puts Node in a unique position. Honestly, I doubt any other programming language or  platform can compete with Node in a near future, because of this unique position to have language to rule 'em all!
+Having one language on the browser and server (and the database if you want!) is huge, because we can re-use code. Also, web developers amassed boatloads of great utilities, tools, and the best practices for browser JavaScript, because JS has been around for 21 years now (as of Jan 2016). Most of them are ready-to-go in Node environment with very minor modifications, e.g., using [Browserify](http://browserify.org). We also have a lot of great tutorials, books, blogs, and screencasts on JS. In addition, there's a standard which improves JavaScript language (ES6, ES7, etc.). All of this puts Node in a unique position. Honestly, its any other programming language or  platform can compete with Node in a near future, because of this unique position to have language to rule 'em all!
 
 ## Node History
 
