@@ -4,7 +4,6 @@
 
 We'll give a quick overview of Node.js and explain non-blocking I/O, and provide a bird's eye view on how it fits into web development.
 
-
 ## Objectives
 
 1. Describe increase in performance when using Node.js?
@@ -13,17 +12,17 @@ We'll give a quick overview of Node.js and explain non-blocking I/O, and provide
 
 ## Non-Blocking Input/Output
 
-Have you worked with Rails and had to wait while its ActiveRecord was processing some simple database join? Or maybe you remember seeing the fail whale every time Twitter was over the capacity. It happened quite often, maybe every week. Slow systems are not only frustrating to users. They cost money to companies because users leave to other services and products. Slow systems are system that cannot handle the traffic or load properly. The slow is a relative term. One system can perform adequate without comparisons, for example what we consider slow in 2016 is very fast comparing to 2000. The reason can be the use of a bad architecture. With Rails the slowness is due to the high-level of abstraction meaning the Object Relational Mapper (ORM) Active Record and the framework as the whole is doing too many things. It's a good thing for developer because we have to code less, but as the real-life showed—not so good for the systems. Another reason for slowness is the way systems are architectured. 
+Have you worked with Rails and had to wait while its ActiveRecord was processing some simple database join? Or maybe you remember seeing the fail whale every time Twitter was over the capacity. It happened quite often, maybe every week. Slow systems are not only frustrating to users. They cost money to companies because users leave to other services and products. Slow systems are system that cannot handle the traffic or load properly. The slow is a relative term. One system can perform adequate without comparisons, for example what we consider slow in 2016 is very fast comparing to 2000. The reason can be the use of a bad architecture. With Rails the slowness is due to the high-level of abstraction meaning the Object Relational Mapper (ORM) Active Record and the framework as the whole is doing too many things. It's a good thing for developer because we have to code less, but as the real-life showed—not so good for the systems. Another reason for slowness is the way systems are architectured.
 
 ![](fail-whale.gif)
 
-So slow platforms not just annoying to develop with, they cost companies hundreds of thousands of dollars each month in servers and CPUs. What if I told you there is a high performant and scalable system which is extremely efficient yet fun to work with? 
+So slow platforms not just annoying to develop with, they cost companies hundreds of thousands of dollars each month in servers and CPUs. What if I told you there is a high performant and scalable system which is extremely efficient yet fun to work with?
 
-Node.js is one of those scalable platforms which enable engineers to build fast systems. Imagine a Starbucks coffeeshop. You see 20 people standing in line and just one person working at the cafe. The single barista is also a cashier meaning this employee must first take the order, then make it. Each person has to wait for the not only for his or her drink but for the order before them... would you wait in line if you are the last? The 20th person? As a manager of this cafe, the only way to scale is to add more registers. By adding more registers and employees we can have more than one line. Each cashier is still taking the orders and making the drinks. This is not the most pleasant experience for customers because they don't like standing in lines. Slow systems are painful and they cost money because customers can walk away without ordering anything. 
+Node.js is one of those scalable platforms which enable engineers to build fast systems. Imagine a Starbucks coffeeshop. You see 20 people standing in line and just one person working at the cafe. The single barista is also a cashier meaning this employee must first take the order, then make it. Each person has to wait for the not only for his or her drink but for the order before them... would you wait in line if you are the last? The 20th person? As a manager of this cafe, the only way to scale is to add more registers. By adding more registers and employees we can have more than one line. Each cashier is still taking the orders and making the drinks. This is not the most pleasant experience for customers because they don't like standing in lines. Slow systems are painful and they cost money because customers can walk away without ordering anything.
 
 Luckily, this is not how the most Starbucks or coffeeshops operate. You order your  fancy choco-mocha-frappe-latte-soy-decafs, the cashier will yell your order and take the money. You step aside to check to work on some Learn.co modules. You can do other things while waiting for your drink. The line is not blocked. It moves faster. The orders are taken by the cashier and the drinks are made by another employee. This is a more pleasurable experience than waiting the entire time in the line right?
 
-The first scenario is how most of the platforms, e.g., Rails operate. The approach is called blocking input/output (I/O) in computer world because the line(s) are blocked be previous orders (or tasks in the computer lingo). The line is a metaphor for a queue of tasks while the employees can be servers. So how Node.js is different? Node.js has non-blocking I/O which as you might guess is the latter approach. 
+The first scenario is how most of the platforms, e.g., Rails operate. The approach is called blocking input/output (I/O) in computer world because the line(s) are blocked be previous orders (or tasks in the computer lingo). The line is a metaphor for a queue of tasks while the employees can be servers. So how Node.js is different? Node.js has non-blocking I/O which as you might guess is the latter approach.
 
 The queue moves, and the processes are executed asynchronously and without blocking the queue. Note: The real Starbucks uses blocking I/O for simple drinks house brews in a big coffers like Pike Place (regular brew) and teas. They take a minute or so to make.  However, the chain uses a non-blocking I/O system for hand-crafted one like lattes, frappes, Cappuccino and others which take longer to make.
 
@@ -40,7 +39,7 @@ Node is different because it has this concept called full stack, isomorphic or u
 
 I know that you probably want to learn how to and not history. Feel free to skip this part. It won't be in the test. ;) Nevertheless, how did Node start?
 
-1. 2009: Ryan Dahl invented Node to make file uploads easier. JavaScript was the third language of choice and it stuck. Ryan joined Joyent. 
+1. 2009: Ryan Dahl invented Node to make file uploads easier. JavaScript was the third language of choice and it stuck. Ryan joined Joyent.
 2. 2011: Isaac Schlueter wrote npm (package manager); Windows version of Node.js was released. Versions 0.1 to 0.6 released.
 3. 2012: Isaac Schlueter replaced Ryan Dahl as "head" of Node at Joyent. Versions 0.6 to 0.9 released
 4. 2013: Versions 0.10 and 0.11 released.
