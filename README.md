@@ -16,7 +16,7 @@ Have you worked with Rails and had to wait while ActiveRecord was processing som
 
 ![](fail-whale.gif)
 
-Slow platforms are not just annoying to develop with, they cost companies hundreds of thousands of dollars each month in servers and CPUs. What if I told you there is a high performant and scalable system which is extremely efficient yet fun to work with?
+Slow platforms are not just annoying to develop with, they also cost companies hundreds of thousands of dollars each month in servers and CPUs. What if I told you there is a high performant and scalable system which is extremely efficient yet fun to work with?
 
 Node.js is one of those scalable platforms which enable engineers to build fast systems. Imagine a Starbucks coffee shop. You see 20 people standing in line and just one person working at the cafe. The single barista is also a cashier meaning this employee must first take the order, then make it. Each person has to wait for the not only for his or her drink but for the order before them... would you wait in line if you are the last? The 20th person? As a manager of this cafe, the only way to scale is to add more registers. By adding more registers and employees we can have more than one line. Each cashier is still taking the orders and making the drinks. This is not the most pleasant experience for customers because they don't like standing in lines. Slow systems are painful and they cost money because customers can walk away without ordering anything.
 
