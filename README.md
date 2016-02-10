@@ -38,7 +38,7 @@ Node is different because it has this concept called full stack, isomorphic or u
 
 ## Node History
 
-We know that you probably want to learn how tos and not so much about Node history. Feel free to skip this part. It won't be in the test. ;) Nevertheless, knowing Node history will make you a start at developer happy hours. So how did Node start?
+We know that you probably want to learn how to's and not so much about Node history. Feel free to skip this part. It won't be in the test. ;) Nevertheless, knowing Node history will make you a start at developer happy hours. So how did Node start?
 
 1. 2009: Ryan Dahl invented Node to make file uploads easier. JavaScript was the third language of choice and it stuck. Ryan joined Joyent.
 2. 2011: Isaac Schlueter wrote npm (package manager); Windows version of Node.js was released. Versions 0.1 to 0.6 released.
