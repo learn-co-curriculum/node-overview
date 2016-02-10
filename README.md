@@ -16,7 +16,8 @@ Have you worked with Rails and had to wait while ActiveRecord was processing som
 
 ![](fail-whale.gif)
 
-Slow platforms are not just annoying to develop with, they also cost companies hundreds of thousands of dollars each month in servers and CPUs. What if I told you there is a high performing and scalable system which is extremely efficient yet fun to work with?
+
+Slow platforms are not just annoying to develop with, they also cost companies hundreds of thousands of dollars each month in servers and CPUs. What if we told you there is a high performing and scalable system which is extremely efficient yet fun to work with?
 
 Node.js is one of those scalable platforms which enable engineers to build fast systems. Imagine a Starbucks coffee shop. You see 20 people standing in line and just one person working at the cafe. The single barista is also a cashier meaning this employee must first take the order, then make it. Each person has to wait for the not only for his or her drink but for the order before them... would you wait in line if you are the last? The 20th person? As a manager of this cafe, the only way to scale is to add more registers. By adding more registers and employees we can have more than one line. Each cashier is still taking the orders and making the drinks. This is not the most pleasant experience for customers because they don't like standing in lines. Slow systems are painful and they cost money because customers can walk away without ordering anything.
 
@@ -33,11 +34,11 @@ Therefore, Node.js systems can serve more traffic because they are not idle or b
 
 When you develop application in Rails, you might use Haml to render server-side templates, then on the client-side you might use another framework and another template engine like Angular or Mustache. Those libraries are great, but consider that you have 100s of pages with a duplicate templates: one file for server-side rendering and another for browser rendering. To add complexity, this is an enterprise application which has been developed many years ago and you have 20+ people working on the project. How are you going to make changes to 200+ files? You need to make similar changes to two files and then change the tests as well. What if they are different languages? Imagine the nightmare. Sadly this is the case in most systems.
 
-Node is different because it has this concept called full stack, isomorphic or universal JavaScript. I prefer term full-stack JavaScript. No matter what you call it, the idea is that you can re-use files, libraries and modules between server and browser seamlessly. This is huge because we, as web developers, amassed boatloads of great utilities and tools for browser JavaScript. Most of them are ready-to-go in Node environment with very minor modifications, e.g., using [Browserify](http://browserify.org). Same thing applies to books, blogs, screencasts. JavaScript is continually improved, (ES6, ES7, etc.) which put Node in a unique position. Honestly, I doubt Go or some other new platform can compete with Node in near future because of this unique combination which allows developers to have language to rule 'em all!
+Node is different because it has this concept called full stack, isomorphic or universal JavaScript. Azat Mardan, the author of this lesson, prefers the term full-stack JavaScript. No matter what you call it, the idea is that you can re-use files, libraries and modules between server and browser seamlessly. This is huge because we, as web developers, amassed boatloads of great utilities and tools for browser JavaScript. Most of them are ready-to-go in Node environment with very minor modifications, e.g., using [Browserify](http://browserify.org). Same thing applies to books, blogs, screencasts. JavaScript is continually improved, (ES6, ES7, etc.) which put Node in a unique position. Honestly, we doubt Go or some other new platform can compete with Node in near future because of this unique combination which allows developers to have language to rule 'em all!
 
 ## Node History
 
-I know that you probably want to learn how to and not history. Feel free to skip this part. It won't be in the test. ;) Nevertheless, how did Node start?
+We know that you probably want to learn how tos and not so much about Node history. Feel free to skip this part. It won't be in the test. ;) Nevertheless, knowing Node history will make you a start at developer happy hours. So how did Node start?
 
 1. 2009: Ryan Dahl invented Node to make file uploads easier. JavaScript was the third language of choice and it stuck. Ryan joined Joyent.
 2. 2011: Isaac Schlueter wrote npm (package manager); Windows version of Node.js was released. Versions 0.1 to 0.6 released.
