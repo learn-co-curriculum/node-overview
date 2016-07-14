@@ -55,9 +55,11 @@ And this video which in 5 minutes explains [the past, present and the future of 
 
 1. [The Story of the Fail Whale](http://readwrite.com/2008/07/17/the_story_of_the_fail_whale)
 1. [Ryan Dahl: Original Node.js presentation](https://www.youtube.com/watch?v=ztspvPYybIY)
-1. [The past, present and the future of Node.js and Joeynt](https://www.youtube.com/watch?v=dWwIHRLzLew)
+1. [The past, present and the future of Node.js and Joyent](https://www.youtube.com/watch?v=dWwIHRLzLew)
 4. [Node.js Foundation](https://nodejs.org/en/foundation)
 
 ---
 
 <a href='https://learn.co/lessons/node-overview' data-visibility='hidden'>View this lesson on Learn.co</a>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/node-overview'>Node Overview</a> on Learn.co and start learning to code for free.</p>
