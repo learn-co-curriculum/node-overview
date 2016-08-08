@@ -25,7 +25,7 @@ Luckily, this is not how the most Starbucks or coffee shops operate. You order y
 
 The first scenario is how most platforms, including Rails, operate. The approach is called blocking input/output (I/O) in computer world because the line(s) are blocked by previous orders (or tasks in the computer lingo). The line is a metaphor for a queue of tasks while the employees can be servers. So how is Node.js different? Node.js has non-blocking I/O which as you might guess is the latter approach.
 
-The queue moves, and the processes are executed asynchronously and without blocking the queue. Note: The real Starbucks uses blocking I/O for simple drinks like regular coffe and teas since they take very little time to make.  However, the chain uses a non-blocking I/O system for more complicated, hand-crafted drinks like lattes, frappes, Cappuccino and others that take longer to make.
+The queue moves, and the processes are executed asynchronously and without blocking the queue. Note: The real Starbucks uses blocking I/O for simple drinks like regular coffee and teas since they take very little time to make.  However, the chain uses a non-blocking I/O system for more complicated, hand-crafted drinks like lattes, frappes, Cappuccino and others that take longer to make.
 
 Therefore, Node.js systems can serve more traffic because they are not idle or blocked. They can process other tasks while waiting on the input/output operations (usually the most time consuming). For example, a Node.js server can process a request from client B while it waits for a response from a database to server a response to client A. Most other systems will do nothing while they wait for a reply from a database to server client A's request.
 
