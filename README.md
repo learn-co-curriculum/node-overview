@@ -24,7 +24,7 @@ The first scenario is how most platforms, including Rails, operate. The approach
 
 The queue moves, and the processes are executed asynchronously and without blocking the queue. Note: The real Starbucks uses blocking I/O for simple drinks like regular coffee and teas since they take very little time to make.  However, the chain uses a non-blocking I/O system for more complicated, hand-crafted drinks like lattes, frappes, Cappuccino and others that take longer to make.
 
-Therefore, Node.js systems can serve more traffic because they are not idle or blocked. They can process other tasks while waiting on the input/output operations (usually the most time consuming). For example, a Node.js server can process a request from client B while it waits for a response from a database to server a response to client A. Most other systems will do nothing while they wait for a reply from a database to server client A's request.
+Therefore, Node.js systems can serve more traffic because they are not idle or blocked. They can process other tasks while waiting on the input/output operations (usually the most time consuming). For example, a Node.js server can process a request from client B while it waits for a response from a database to serve a response to client A. Most other systems will do nothing while they wait for a reply from a database to server client A's request.
 
 
 ## Full Stack JavaScript
@@ -56,7 +56,5 @@ And this video which in 5 minutes explains [the past, present and the future of 
 4. [Node.js Foundation](https://nodejs.org/en/foundation)
 
 ---
-
-<a href='https://learn.co/lessons/node-overview' data-visibility='hidden'>View this lesson on Learn.co</a>
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/node-overview'>Node Overview</a> on Learn.co and start learning to code for free.</p>
