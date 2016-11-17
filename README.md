@@ -7,8 +7,8 @@ We'll give a quick overview of Node.js and explain non-blocking I/O, and provide
 ## Objectives
 
 1. Describe increase in performance when using Node.js?
-1. Describe the re-use of code when using Node.js?
-1. Describe Node.js history (a very brief version)
+2. Describe the re-use of code when using Node.js?
+3. Describe Node.js history (a very brief version)
 
 ## Non-Blocking Input/Output
 
@@ -24,7 +24,7 @@ The first scenario is how most platforms, including Rails, operate. The approach
 
 The queue moves, and the processes are executed asynchronously and without blocking the queue. Note: The real Starbucks uses blocking I/O for simple drinks like regular coffee and teas since they take very little time to make.  However, the chain uses a non-blocking I/O system for more complicated, hand-crafted drinks like lattes, frappes, Cappuccino and others that take longer to make.
 
-Therefore, Node.js systems can serve more traffic because they are not idle or blocked. They can process other tasks while waiting on the input/output operations (usually the most time consuming). For example, a Node.js server can process a request from client B while it waits for a response from a database to serve a response to client A. Most other systems will do nothing while they wait for a reply from a database to server client A's request.
+Therefore, Node.js systems can serve more traffic because they are not idle or blocked. They can process other tasks while waiting on the input/output operations (usually the most time consuming). For example, a Node.js server can process a request from client B while it waits for a response from a database to serve a response to client A. Most other systems will do nothing while they wait for a reply from a database to serve client A's request.
 
 
 ## Full Stack JavaScript
@@ -41,8 +41,8 @@ We know that you probably want to learn how to's and not so much about Node hist
 2. 2011: Isaac Schlueter writes npm (package manager); Windows version of Node.js is released. Versions 0.1 to 0.6 released.
 3. 2012: Isaac Schlueter replaces Ryan Dahl as "head" of Node at Joyent. Versions 0.6 to 0.9 released
 4. 2013: Versions 0.10 and 0.11 are released.
-4. 2014: Timothy J. Fontaine becomes the Node project lead; Node.js is forked by open source community to speed up releases. Versions 0.12 released.
-5. 2015: Node.js Foundation is created and io.js becomes Node.js. Versions 1.x through 5.x are released.
+5. 2014: Timothy J. Fontaine becomes the Node project lead; Node.js is forked by open source community to speed up releases. Versions 0.12 released.
+6. 2015: Node.js Foundation is created and io.js becomes Node.js. Versions 1.x through 5.x are released.
 
 And this video which in 5 minutes explains [the past, present and the future of Node.js and Joyent](https://www.youtube.com/watch?v=dWwIHRLzLew).
 
@@ -51,8 +51,8 @@ And this video which in 5 minutes explains [the past, present and the future of 
 ## Resources
 
 1. [The Story of the Fail Whale](http://readwrite.com/2008/07/17/the_story_of_the_fail_whale)
-1. [Ryan Dahl: Original Node.js presentation](https://www.youtube.com/watch?v=ztspvPYybIY)
-1. [The past, present and the future of Node.js and Joyent](https://www.youtube.com/watch?v=dWwIHRLzLew)
+2. [Ryan Dahl: Original Node.js presentation](https://www.youtube.com/watch?v=ztspvPYybIY)
+3. [The past, present and the future of Node.js and Joyent](https://www.youtube.com/watch?v=dWwIHRLzLew)
 4. [Node.js Foundation](https://nodejs.org/en/foundation)
 
 ---
