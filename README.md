@@ -7,8 +7,8 @@ We'll give a quick overview of Node.js and explain non-blocking I/O, and provide
 ## Objectives
 
 1. Describe increase in performance when using Node.js?
-1. Describe the re-use of code when using Node.js?
-1. Describe Node.js history (a very brief version)
+2. Describe the re-use of code when using Node.js?
+3. Describe Node.js history (a very brief version)
 
 ## Non-Blocking Input/Output
 
@@ -24,12 +24,12 @@ The first scenario is how most platforms, including Rails, operate. The approach
 
 The queue moves, and the processes are executed asynchronously and without blocking the queue. Note: The real Starbucks uses blocking I/O for simple drinks like regular coffee and teas since they take very little time to make.  However, the chain uses a non-blocking I/O system for more complicated, hand-crafted drinks like lattes, frappes, Cappuccino and others that take longer to make.
 
-Therefore, Node.js systems can serve more traffic because they are not idle or blocked. They can process other tasks while waiting on the input/output operations (usually the most time consuming). For example, a Node.js server can process a request from client B while it waits for a response from a database to server a response to client A. Most other systems will do nothing while they wait for a reply from a database to server client A's request.
+Therefore, Node.js systems can serve more traffic because they are not idle or blocked. They can process other tasks while waiting on the input/output operations (usually the most time consuming). For example, a Node.js server can process a request from client B while it waits for a response from a database to serve a response to client A. Most other systems will do nothing while they wait for a reply from a database to serve client A's request.
 
 
 ## Full Stack JavaScript
 
-When you develop applications in Rails, you might use Haml to render server-side templates and then on the client-side you might use another framework and another template engine like Angular. Those libraries are great, but consider that you have hundreds of pages with duplicate templates: one file for server-side rendering and another for browser rendering. To add complexity, this is an enterprise application which has been developed many years ago and you have 20+ people working on the project. How are you going to make changes to 200+ files? You need to make similar changes to two files and then change the tests as well. What if they are different languages? Imagine the nightmare. Sadly this is the case in most systems.
+When you develop applications in Rails, you might use Haml to render server-side templates and then on the client-side you might use another framework and another template engine like Angular. Those libraries are great, but consider that you have hundreds of pages with duplicate templates: one file for server-side rendering and another for browser rendering. To add complexity, this is an enterprise application that was developed many years ago, and you have 20+ people working on the project. How are you going to make changes to 200+ files? You need to make similar changes to two files and then change the tests as well. What if they are different languages? Imagine the nightmare. Sadly this is the case in most systems.
 
 Node is different because it has this concept called full stack, isomorphic or universal JavaScript. No matter what you call it, the idea is that you can re-use files, libraries and modules between the server and the browser seamlessly. This is huge because as web developers, we've amassed boatloads of great utilities and tools for browser JavaScript. Most of them are ready-to-go in the Node environment with very minor modifications, e.g., using [Browserify](http://browserify.org). Same thing applies to books, blogs, and screencasts. JavaScript is continually being improved, (ES6, ES7, etc.) which puts Node in a unique position. 
 
@@ -37,26 +37,24 @@ Node is different because it has this concept called full stack, isomorphic or u
 
 We know that you probably want to learn how to's and not so much about Node history so feel free to skip this part. Nevertheless, knowing Node history will make you a star at developer happy hours. So how did Node start?
 
-1. 2009: Ryan Dahl invents Node to make file uploads easier. JavaScript is the third language of choice and it sticks. Ryan joins Joyent.
+1. 2009: Ryan Dahl invents Node to make file uploads easier. JavaScript is the third language of choice, and it sticks. Ryan joins Joyent.
 2. 2011: Isaac Schlueter writes npm (package manager); Windows version of Node.js is released. Versions 0.1 to 0.6 released.
 3. 2012: Isaac Schlueter replaces Ryan Dahl as "head" of Node at Joyent. Versions 0.6 to 0.9 released
 4. 2013: Versions 0.10 and 0.11 are released.
-4. 2014: Timothy J. Fontaine becomes the Node project lead; Node.js is forked by open source community to speed up releases. Versions 0.12 released.
-5. 2015: Node.js Foundation is created and io.js becomes Node.js. Versions 1.x through 5.x are released.
+5. 2014: Timothy J. Fontaine becomes the Node project lead; Node.js is forked by open source community to speed up releases. Version 0.12 released.
+6. 2015: Node.js Foundation is created, and io.js becomes Node.js. Versions 1.x through 5.x are released.
 
-And this video which in 5 minutes explains [the past, present and the future of Node.js and Joyent](https://www.youtube.com/watch?v=dWwIHRLzLew).
+Here's a five-minute video that explains [the past, present and the future of Node.js and Joyent](https://www.youtube.com/watch?v=dWwIHRLzLew).
 
 
 
 ## Resources
 
 1. [The Story of the Fail Whale](http://readwrite.com/2008/07/17/the_story_of_the_fail_whale)
-1. [Ryan Dahl: Original Node.js presentation](https://www.youtube.com/watch?v=ztspvPYybIY)
-1. [The past, present and the future of Node.js and Joyent](https://www.youtube.com/watch?v=dWwIHRLzLew)
+2. [Ryan Dahl: Original Node.js presentation](https://www.youtube.com/watch?v=ztspvPYybIY)
+3. [The past, present and the future of Node.js and Joyent](https://www.youtube.com/watch?v=dWwIHRLzLew)
 4. [Node.js Foundation](https://nodejs.org/en/foundation)
 
 ---
-
-<a href='https://learn.co/lessons/node-overview' data-visibility='hidden'>View this lesson on Learn.co</a>
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/node-overview'>Node Overview</a> on Learn.co and start learning to code for free.</p>
